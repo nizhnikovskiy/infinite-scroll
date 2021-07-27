@@ -26,7 +26,8 @@
       </th>
       <td mat-cell *matCellDef="let element">
         <ng-container *ngIf="element">
-          <a [routerLink]="'/trip/' + element.id">{{ element.description }}</a>
+          <a [routerLink]="'/trip/' + element.id" class="item-link">{{ element.description }}</a>
+          <div class="reservations">Reservations: 1</div>
         </ng-container>
       </td>
     </ng-container>
@@ -60,7 +61,10 @@
       </th>
       <td mat-cell *matCellDef="let element">
         <ng-container *ngIf="element">
-          {{ element.createdOn }}
+          <div class="created-on">
+            {{ element.createdOn.slice(0, 12) }} <br/>
+            {{ element.createdOn.slice(12, 24) }}
+          </div>
         </ng-container>
       </td>
     </ng-container>
@@ -70,7 +74,9 @@
       </th>
       <td mat-cell *matCellDef="let element">
         <ng-container *ngIf="element">
-          {{ element.status }}
+          <div class="status-button">
+            {{ element.status }}
+          </div>
         </ng-container>
       </td>
     </ng-container>

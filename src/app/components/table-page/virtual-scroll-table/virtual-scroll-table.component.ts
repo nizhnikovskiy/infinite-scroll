@@ -40,8 +40,10 @@ export class VirtualScrollTableComponent implements OnInit, AfterViewInit, OnDes
       const tableViewHeight = event.target.offsetHeight;
       const scrollLocation = event.target.scrollTop;
       const buffer = tableViewHeight / 2;
-      const itemSize = 58;
-      let index = Math.floor((scrollLocation + buffer) / (itemSize * this.tableDataService.partSize));
+      const defaultSize = 58;
+      const elementHeight = document.querySelector('.element-row')?.clientHeight;
+      const size = elementHeight ? elementHeight + 10 : defaultSize;
+      let index = Math.floor((scrollLocation + buffer) / (size * this.tableDataService.partSize));
       index = index < 4 ? 0 : index - 3;
       this.dataSource.loadData(index);
       this.scrollLocation = scrollLocation;
