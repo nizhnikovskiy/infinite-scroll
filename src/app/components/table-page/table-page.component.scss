@@ -1,0 +1,29 @@
+.table-page {
+  &__control {
+    margin: 20px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__header-wrapper {
+    &_header {
+      font-size: 25px;
+      padding-bottom: 5px;
+    }
+    &_breadcrumbs {
+      color: #8d8d8d;
+    }
+  }
+  &__table-controls {
+    ::ng-deep {
+      .mat-button-wrapper {
+        text-transform: uppercase;
+      }
+    }
+  }
+  &__table {
+    background: #eeeeee;
+    padding: 15px 10px;
+    height: 800px;
+  }
+}

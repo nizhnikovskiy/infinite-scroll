@@ -1,0 +1,32 @@
+.header {
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: #1a237e;
+  color: #FAFAFA;
+
+  &__input {
+    ::ng-deep {
+      .mat-form-field-label {
+        color: #FAFAFA;
+      }
+      .mat-form-field-appearance-fill .mat-form-field-ripple {
+        height: 0;
+      }
+      .mat-form-field-appearance-fill .mat-form-field-underline::before {
+        background-color: transparent;
+      }
+      .mat-form-field-wrapper {
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  &__icons {
+    font-size: 24px;
+    mat-icon {
+      padding: 10px;
+    }
+  }
+}
