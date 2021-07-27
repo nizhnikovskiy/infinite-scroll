@@ -116,3 +116,30 @@ tr.element-row:not(.expanded-row):active {
   border-radius: 20px;
   text-align: center;
 }
+
+::ng-deep {
+  .example-expanded-row + .detail-row {
+    outline: 1px solid #eaeaea;
+  }
+}
+
+.element-description {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.arrow-forward {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid #1a237e;
+  background: #ffffff;
+  z-index: 100;
+  left: 226px;
+  top: 60px
+}

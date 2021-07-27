@@ -88,6 +88,8 @@
                [@detailExpand]="element == expandedElement ? 'expanded' : 'collapsed'">
             <div class="element-description">
               <app-trip-info [tripInfo]="element"></app-trip-info>
+              <div class="arrow-forward"><mat-icon>arrow_forward</mat-icon></div>
+              <app-trip-info [tripInfo]="element"></app-trip-info>
             </div>
           </div>
         </ng-container>

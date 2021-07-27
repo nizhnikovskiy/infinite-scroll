@@ -56,7 +56,7 @@ export class TableDataSourceService {
 
   private fetchPage(page: number, size: number): Observable<TableData> {
     this.isLoading.next(true);
-    return timer(2000).pipe(map((value) => {
+    return timer(1500).pipe(map((value) => {
       return  Array.from({ length: size }).map((_, i) => {
         const randomIndex = this.getRandomNumberBetween(0, 9);
         this.isLoading.next(false);
