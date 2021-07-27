@@ -1,6 +1,6 @@
 import { CollectionViewer, DataSource } from "@angular/cdk/collections";
 import { BehaviorSubject, Observable, of, Subscription } from "rxjs";
-import { catchError, finalize } from "rxjs/operators";
+import { catchError } from "rxjs/operators";
 
 import { TableDataSourceService } from "../../../../services/table-data-source/table-data-source.service";
 
